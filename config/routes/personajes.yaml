@@ -1,0 +1,24 @@
+prejoin:
+  path: /seleccionpersonaje
+  controller: App\Controller\PersonajesController::seleccionpersonaje
+personaje:
+  path: /personajeplantillas
+  controller: App\Controller\PersonajesPlantillasController::personajeplantillas
+personajeplantilla:
+  path: /getplantilla
+  controller: App\Controller\PersonajesPlantillasController::getplantilla
+personajenew:
+  path: /newpersonaje
+  controller: App\Controller\PersonajesController::newpersonaje
+detallespersonajes:
+  path: /detallespersonajes
+  controller: App\Controller\PersonajesController::detallespersonajes
+crearclase:
+  path: /crearclase
+  controller: App\Controller\PersonajesPlantillasController::crearclase
+tap:
+  path: /tap
+  controller: App\Controller\PersonajesController::tap
+reward:
+  path: /reward
+  controller: App\Controller\PersonajesController::reward

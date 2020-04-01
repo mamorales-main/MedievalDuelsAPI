@@ -1,0 +1,48 @@
+App\Entity\EquipoPlantillas:
+    type: entity
+    repositoryClass: App\Repository\EquipoPlantillasRepository
+    table: equipo_plantillas
+    id:
+        idEquipo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_equipo
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: ''
+        slot:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+        fuerza:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+        destreza:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+        inteligencia:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+        coste:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+    lifecycleCallbacks: {  }

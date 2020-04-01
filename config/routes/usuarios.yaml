@@ -1,0 +1,26 @@
+login:
+  path: /login
+  controller: App\Controller\UsuariosController::login
+
+logout:
+  path: /logout
+  controller: App\Controller\UsuariosController::logout
+
+new_Usuario:
+  path: /register
+  controller: App\Controller\UsuariosController::registro
+
+update_usuario:
+  path: /usuario/update
+  controller: App\Controller\UsuariosController::editar
+
+delete_usuario:
+  path: /usuario/delete
+  controller: App\Controller\UsuariosController::delete
+
+get_detalles:
+    path: /usuario/getdetalles
+    controller: App\Controller\UsuariosController::getdetalles
+imagen:
+  path: /imagen
+  controller: App\Controller\UsuariosController::uploadSingleImage

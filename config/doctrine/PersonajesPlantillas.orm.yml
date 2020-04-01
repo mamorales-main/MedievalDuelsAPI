@@ -1,0 +1,40 @@
+App\Entity\PersonajesPlantillas:
+    type: entity
+    repositoryClass: App\Repository\PersonajesPlantillasRepository
+    table: personajes_plantillas
+    id:
+        clase:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nivel:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        fuerza:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        destreza:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        inteligencia:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,44 @@
+App\Entity\EquipoPersonajes:
+    type: entity
+    repositoryClass: App\Repository\EquipoPersonajesRepository
+    table: equipo_personajes
+    indexes:
+        fk_equipo:
+            columns:
+                - id_equipo
+        IDX_383AD2993A909126:
+            columns:
+                - nombre
+    id:
+        slot:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            id: true
+        nombre:
+            associationKey: true
+    manyToOne:
+        idEquipo:
+            targetEntity: EquipoPlantillas
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_equipo:
+                    referencedColumnName: id_equipo
+            orphanRemoval: false
+    oneToOne:
+        nombre:
+            targetEntity: Personajes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                nombre:
+                    referencedColumnName: nombre
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

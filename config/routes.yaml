@@ -1,0 +1,8 @@
+usuarios:
+    resource: "./routes/usuarios.yaml"
+    prefix: /
+
+personajes:
+    resource: "./routes/personajes.yaml"
+    prefix: /
+

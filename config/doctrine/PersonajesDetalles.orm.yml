@@ -1,0 +1,68 @@
+App\Entity\PersonajesDetalles:
+    type: entity
+    repositoryClass: App\Repository\PersonajesDetallesRepository
+    table: personajes_detalles
+    id:
+        nombre:
+            associationKey: true
+    fields:
+        nivel:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        clase:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        fuerza:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        destreza:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        inteligencia:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        saldo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        exp:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+        expreq:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '10000'
+    oneToOne:
+        nombre:
+            targetEntity: Personajes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                nombre:
+                    referencedColumnName: nombre
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

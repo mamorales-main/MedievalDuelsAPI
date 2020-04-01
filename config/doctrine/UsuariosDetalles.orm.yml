@@ -1,0 +1,50 @@
+App\Entity\UsuariosDetalles:
+    type: entity
+    repositoryClass: App\Repository\UsuariosDetallesRepository
+    table: usuarios_detalles
+    id:
+        login:
+            associationKey: true
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        apellidos:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        pais:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        telefono:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        img:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    oneToOne:
+        login:
+            targetEntity: Usuarios
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                login:
+                    referencedColumnName: login
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,5 @@
+---
+i_need:
+    defaults:
+        _controller: AlumnosController::defaultAction
+    resource: ./localized-route.yml
